@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { weatherApi } from '../utils/weatherApi';
 import { CombinedWeatherData } from '../types/weather';
-import WeatherIcon from './WeatherIcon';
 import SearchBar from './SearchBar';
 import CurrentWeather from './CurrentWeather';
 import Forecast from './Forecast';

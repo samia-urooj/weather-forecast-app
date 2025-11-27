@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from "next/image";
 interface WeatherIconProps {
   icon: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -15,7 +15,7 @@ const WeatherIcon: React.FC<WeatherIconProps> = ({ icon, size = 'md', className 
   };
 
   return (
-    <img
+    <Image
       src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
       alt="Weather icon"
       className={`${sizeClasses[size]} ${className}`}

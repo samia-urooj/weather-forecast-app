@@ -29,6 +29,7 @@ export const weatherApi = {
         forecast: forecastResponse.data,
       };
     } catch (error) {
+      console.error("API Error:", error);
       throw new Error('City not found. Please try again.');
     }
   },

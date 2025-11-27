@@ -9,7 +9,7 @@ interface SearchBarProps {
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch, loading }) => {
   const [city, setCity] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSearch(city);
   };
@@ -27,7 +27,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, loading }) => {
           whileFocus={{ scale: 1.02 }}
           type="text"
           value={city}
-          onChange={(e:any) => setCity(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCity(e.target.value)}
           placeholder="Enter city name..."
           className="flex-1 px-6 py-4 rounded-full bg-white/20 backdrop-blur-lg border border-white/30 text-white placeholder-blue-100 focus:outline-none focus:ring-4 focus:ring-white/30 text-lg shadow-2xl"
           disabled={loading}
