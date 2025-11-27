@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backdropBlur: {
+        xs: '2px',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
